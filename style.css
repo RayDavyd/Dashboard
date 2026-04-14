@@ -2,23 +2,48 @@
   font-family: "Nunito", sans-serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(135deg, #0e0f13 0%, #1a1730 100%);
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #030108,
+    #0e0222,
+    #030108,
+    #000000
+  );
+
+  background-size: 400% 400%;
+  animation: moverFundo 20s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin: 0;
+}
+
+@keyframes moverFundo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .card-login {
   background: #16181f;
-  min-height: 60vh;
-  min-width: 45vh;
+  width: 100%;
   border: 2px solid rgba(255, 255, 255, 0.07);
   border-radius: 18px;
   padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .destaque {
@@ -28,69 +53,59 @@ body {
 }
 
 .logo {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 30px;
+  margin-bottom: 1.5rem;
 }
 
 #bemvindo {
   color: #fff;
   font-size: 32px;
   font-weight: 700;
+  margin-bottom: 6px;
 }
 
 #subtitulo {
   color: #7a7d8a;
   font-weight: 500;
-  margin-left: 30px;
-  padding-bottom: 30px;
-}
-
-#bemvindo {
-  margin-top: 30px;
-  margin-left: 30px;
+  padding-bottom: 1.5rem;
 }
 
 label {
   display: block;
   margin-bottom: 6px;
-  margin-left: 30px;
   color: #7a7d8a;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 input {
-  margin-bottom: 10px;
-  margin-left: 30px;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 1rem;
   padding: 15px;
-  padding-right: 12rem;
   background: #1e2029;
   border: 2px solid rgba(255, 255, 255, 0.07);
   border-radius: 8px;
-  color: #7a7d8a;
+  color: #d4d7df;
+  overflow: visible;
+  text-overflow: ellipsis;
+  font-size: 20px;
 }
 
 input::placeholder {
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 button {
-  width: 89%;
+  width: 100%;
   padding: 15px;
-  margin-left: 30px;
   background: #6c63ff;
   border: 2px solid rgba(255, 255, 255, 0.07);
   border-radius: 40px;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 900;
   cursor: pointer;
   margin-top: 2rem;
-  font-size: 1.3rem;
-}
-
-button {
   transition: transform 0.5s ease;
 }
 
@@ -99,6 +114,7 @@ button:hover {
 }
 
 .dados-login {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,10 +123,10 @@ button:hover {
   border-radius: 8px;
   margin-top: 4rem;
   padding: 23px;
-  margin: 4rem 1rem 1rem 1.6rem;
 }
 #dados-fic {
   color: #7a7d8a;
+  font-size: 20px;
 }
 
 footer {
