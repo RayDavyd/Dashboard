@@ -22,6 +22,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  padding: 2rem 0;
 }
 
 @keyframes moverFundo {
@@ -39,6 +40,7 @@ body {
 .card-login {
   background: #16181f;
   width: 100%;
+  max-width: 750px;
   border: 2px solid rgba(255, 255, 255, 0.07);
   border-radius: 18px;
   padding: 2.5rem 2rem;
@@ -110,7 +112,7 @@ button {
 }
 
 button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-5px);
 }
 
 .dados-login {
@@ -136,4 +138,26 @@ footer {
   color: #7a7d8a;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   margin-top: auto;
+}
+
+
+
+@media (max-width: 720px){
+    .card-login{
+        width: 90%;
+        max-width: 500px;
+    }
+    input, input::placeholder, #dados-fic {
+    font-size: 16px; 
+  }
+  #bemvindo{
+    font-size: 25px;
+  }
+  label{
+    font-size: 15px;
+  }
+  button{
+    
+  }
+    
 }
