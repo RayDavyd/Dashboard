@@ -14,7 +14,6 @@ body {
     #030108,
     #000000
   );
-
   background-size: 400% 400%;
   animation: moverFundo 20s ease infinite;
   display: flex;
@@ -40,9 +39,9 @@ body {
 .card-login {
   background: #16181f;
   width: 100%;
-  max-width: 750px;
-  border: 2px solid rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
+  max-width: 46.875rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.07);
+  border-radius: 1.125rem;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -60,9 +59,9 @@ body {
 
 #bemvindo {
   color: #fff;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 #subtitulo {
@@ -73,7 +72,7 @@ body {
 
 label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   color: #7a7d8a;
   font-weight: 500;
   font-size: 1.1rem;
@@ -81,28 +80,27 @@ label {
 
 input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 0.9375rem;
   margin-bottom: 1rem;
-  padding: 15px;
   background: #1e2029;
-  border: 2px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
+  border: 0.125rem solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.5rem;
   color: #d4d7df;
   overflow: visible;
   text-overflow: ellipsis;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 input::placeholder {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 button {
   width: 100%;
-  padding: 15px;
+  padding: 0.9375rem;
   background: #6c63ff;
-  border: 2px solid rgba(255, 255, 255, 0.07);
-  border-radius: 40px;
+  border: 0.125rem solid rgba(255, 255, 255, 0.07);
+  border-radius: 2.5rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 900;
@@ -112,7 +110,7 @@ button {
 }
 
 button:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.3125rem);
 }
 
 .dados-login {
@@ -121,43 +119,40 @@ button:hover {
   align-items: center;
   justify-content: center;
   background: #1e2029;
-  border: 2px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
+  border: 0.125rem solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.5rem;
   margin-top: 4rem;
-  padding: 23px;
+  padding: 1.4375rem;
 }
+
 #dados-fic {
   color: #7a7d8a;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #7a7d8a;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.07);
   margin-top: auto;
 }
 
-
-
-@media (max-width: 720px){
-    .card-login{
-        width: 90%;
-        max-width: 500px;
-    }
-    input, input::placeholder, #dados-fic {
-    font-size: 16px; 
+@media (max-width: 45rem) {
+  .card-login {
+    width: 90%;
+    max-width: 31.25rem;
   }
-  #bemvindo{
-    font-size: 25px;
+  input,
+  input::placeholder,
+  #dados-fic {
+    font-size: 1rem;
   }
-  label{
-    font-size: 15px;
+  #bemvindo {
+    font-size: 1.5625rem;
   }
-  button{
-    
+  label {
+    font-size: 0.9375rem;
   }
-    
 }
