@@ -42,7 +42,7 @@ body {
   max-width: 30rem;
   border: 0.125rem solid rgba(255, 255, 255, 0.07);
   border-radius: 1.125rem;
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -88,7 +88,7 @@ input {
   color: #d4d7df;
   overflow: visible;
   text-overflow: ellipsis;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 input::placeholder {
@@ -121,13 +121,13 @@ button:hover {
   background: #1e2029;
   border: 0.125rem solid rgba(255, 255, 255, 0.07);
   border-radius: 0.5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 1.4375rem;
 }
 
 #dados-fic {
   color: #7a7d8a;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 footer {
