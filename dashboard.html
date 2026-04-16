@@ -1,32 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard-HAVYCODE</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-
     <div class="layout">
-   
-      <aside class="sidebar">
-         <div class="logo"><span class="destaque">● HAVYCODE</span></div>
-         <nav>
-            <button class="nav-item active">Overview</button>
-            <button class="nav-item">Projetos</button>
-            <button class="nav-item">Clientes</button>
-         </nav>
-          <div class="user-info">
-        <span id="nome-usuario">Admin</span>
-        <button id="btn-logout">Sair</button>
-      </div>
-    </aside>  
+        <aside class="sidebar">
+            <div class="logo"><span class="destaque">● HAVYCODE</span></div>
+            <nav>
+                <button class="nav-item active">Overview</button>
+                <button class="nav-item">Projetos</button>
+                <button class="nav-item">Clientes</button>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div class="user-info">
+                    <span class="nome">Admin</span>
+                    <span class="cargo">Administrador</span>
+                </div>
+                
+            </div>
+        </aside>
+
+
+        
+        <main class="main-content">
+            <header>
+                <h1 id = "overview">Overview</h1>
+                <p id = "saudacoes">Boa noite, Admin! Aqui está o resumo de hoje.</p>
+            </header>   
+
+            <section class="dashboard-grid">
+                
+                    <div class="card stat-card">
+                    <h3>Receita Total</h3>
+                    <p class="valor">€ 15.400</p>
+                </div>
+                
+                <div class="card stat-card">
+                    <h3>Projetos Ativos</h3>
+                    <p class="valor">12</p>
+                </div>
+
+                <div class="card stat-card">
+                    <h3>Novos Clientes</h3>
+                    <p class="valor">8</p>
+                </div>
+
+                <div class="card stat-card">
+                    <h3>Tarefas</h3>
+                    <p class="valor">24</p>
+                </div>
+
+                </section>
+                <section class="charts-grid">
+                <div class="card chart-line">
+                    <h3 class="titulo-grafico">Receita Mensal</h3>
+                    <canvas id="graficoLinha"></canvas>
+                </div>
+
+                <div class="card chart-donut">
+                    <h3 class="titulo-grafico">Projetos por Tipo</h3>
+                    <canvas id="graficoRosca"></canvas>
+                </div>
+            </section>
+        </main>
     </div>
-    <footer>
-        <footer>
-        <p>© 2026 HAVYCODE. Todos os direitos reservados.</p>
-      </footer>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src = "js/dashboard.js"></script>
+    
 </body>
 </html>
