@@ -1,76 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard-HAVYCODE</title>
-    <link rel="stylesheet" href="css/dashboard.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - HAVYCODE</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
     <div class="layout">
-        <aside class="sidebar">
-            <div class="logo"><span class="destaque">● HAVYCODE</span></div>
-            <nav>
-                <button class="nav-item active">Overview</button>
-                <button class="nav-item">Projetos</button>
-                <button class="nav-item">Clientes</button>
-            </nav>
-            <div class="user-profile">
-                <div class="avatar">A</div>
-                <div class="user-info">
-                    <span class="nome">Admin</span>
-                    <span class="cargo">Administrador</span>
-                </div>
-                
+      <aside class="sidebar">
+        <div class="logo"><span class="destaque">● HAVYCODE</span></div>
+        <nav>
+          <button class="nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Overview
+          </button>
+          <button class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            Projetos
+          </button>
+          <button class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Clientes
+          </button>
+        </nav>
+        <div class="user-profile">
+          <div class="avatar">A</div>
+          <div class="user-info">
+            <span class="nome">Admin</span>
+            <span class="cargo">Administrador</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <h1 id="overview">Overview</h1>
+          <p id="saudacoes">Boa noite, Admin! Aqui está o resumo de hoje.</p>
+        </header>
+
+        <section class="dashboard-grid">
+          <div class="card stat-card">
+            <h3>Receita Total</h3>
+            <p class="valor">R$ 15.400</p>
+            <p class="trend positive">↑ 12% <span>vs mês anterior</span></p>
+          </div>
+
+          <div class="card stat-card">
+            <h3>Projetos Ativos</h3>
+            <p class="valor">12</p>
+            <p class="trend positive">↑ 20% <span>vs mês anterior</span></p>
+          </div>
+
+          <div class="card stat-card">
+            <h3>Novos Clientes</h3>
+            <p class="valor">8</p>
+            <p class="trend negative">↓ 5% <span>vs mês anterior</span></p>
+          </div>
+
+          <div class="card stat-card">
+            <h3>Tarefas</h3>
+            <p class="valor">24</p>
+            <p class="trend neutral">- 0% <span>vs mês anterior</span></p>
+          </div>
+        </section>
+
+        <section class="charts-grid">
+          <div class="card chart-line">
+            <div class="chart-header">
+                <h3 class="titulo-grafico">Receita Mensal</h3>
+                <select id="filtroPeriodo" class="chart-filter">
+                    <option value="6">Últimos 6 meses</option>
+                    <option value="12">Últimos 12 meses</option>
+                </select>
             </div>
-        </aside>
+            <canvas id="graficoLinha"></canvas>
+          </div>
 
+          <div class="card chart-donut">
+            <h3 class="titulo-grafico">Projetos por Tipo</h3>
+            <canvas id="graficoRosca"></canvas>
+          </div>
+        </section>
 
-        
-        <main class="main-content">
-            <header>
-                <h1 id = "overview">Overview</h1>
-                <p id = "saudacoes">Boa noite, Admin! Aqui está o resumo de hoje.</p>
-            </header>   
+        <section class="transactions-section">
+          <div class="card transactions-card">
+            <h3 class="titulo-grafico">Últimas Transações</h3>
 
-            <section class="dashboard-grid">
-                
-                    <div class="card stat-card">
-                    <h3>Receita Total</h3>
-                    <p class="valor">€ 15.400</p>
-                </div>
-                
-                <div class="card stat-card">
-                    <h3>Projetos Ativos</h3>
-                    <p class="valor">12</p>
-                </div>
-
-                <div class="card stat-card">
-                    <h3>Novos Clientes</h3>
-                    <p class="valor">8</p>
-                </div>
-
-                <div class="card stat-card">
-                    <h3>Tarefas</h3>
-                    <p class="valor">24</p>
-                </div>
-
-                </section>
-                <section class="charts-grid">
-                <div class="card chart-line">
-                    <h3 class="titulo-grafico">Receita Mensal</h3>
-                    <canvas id="graficoLinha"></canvas>
-                </div>
-
-                <div class="card chart-donut">
-                    <h3 class="titulo-grafico">Projetos por Tipo</h3>
-                    <canvas id="graficoRosca"></canvas>
-                </div>
-            </section>
-        </main>
+            <div class="table-responsive">
+              <table class="table-transacoes">
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Projeto</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Marcela Torres</td>
+                    <td>Landing Page</td>
+                    <td>R$ 1.800</td>
+                    <td><span class="badge pago">Pago</span></td>
+                  </tr>
+                  <tr>
+                    <td>João Lima</td>
+                    <td>E-commerce</td>
+                    <td>R$ 5.400</td>
+                    <td><span class="badge pendente">Pendente</span></td>
+                  </tr>
+                  <tr>
+                    <td>Rafaela Cruz</td>
+                    <td>Dashboard</td>
+                    <td>R$ 3.200</td>
+                    <td><span class="badge pago">Pago</span></td>
+                  </tr>
+                  <tr>
+                    <td>Bruno Alves</td>
+                    <td>Blog</td>
+                    <td>R$ 900</td>
+                    <td><span class="badge cancelado">Cancelado</span></td>
+                  </tr>
+                  <tr>
+                    <td>Larissa Melo</td>
+                    <td>Sistema Interno</td>
+                    <td>R$ 7.120</td>
+                    <td><span class="badge pago">Pago</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-info">
+              Mostrando 5 de 12 transações
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src = "js/dashboard.js"></script>
     
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
 </html>
